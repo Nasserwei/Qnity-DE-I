@@ -20,8 +20,6 @@ body {
   --peach:        #FFCBA4;
   --coral:        #E8836A;
   --terracotta:   #C25E42;
-  --sage:         #A8B89A;
-  --sage-light:   #D4E0CC;
   --warm-brown:   #6B3F2A;
   --text-main:    #3D2B1F;
   --text-muted:   #8C6B58;
@@ -43,11 +41,11 @@ nav {
   padding: 14px 40px;
   display: flex; align-items: center; justify-content: space-between;
 }
-.nav-logo {
-  font-family: 'Noto Serif TC', serif;
-  font-weight: 700; font-size: 1.15rem;
-  color: var(--terracotta);
-  letter-spacing: .06em;
+.nav-logo { display: flex; align-items: center; }
+.nav-logo img {
+  height: 44px;
+  width: auto;
+  display: block;
 }
 .nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a {
@@ -63,7 +61,12 @@ nav {
   min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
   padding: 120px 40px 80px;
-  background: linear-gradient(160deg, #FFF1E8 0%, #FFE2CF 40%, #F5D5C5 100%);
+  background:
+    linear-gradient(160deg, rgba(255,241,232,.93) 0%, rgba(255,226,207,.93) 40%, rgba(245,213,197,.93) 100%),
+    url('../images/background.png');
+  background-size: cover;
+  background-position: 67% 45%;
+  background-repeat: no-repeat;
   position: relative; overflow: hidden;
 }
 .hero-deco {
@@ -77,7 +80,7 @@ nav {
 }
 .hero-deco-2 {
   width: 320px; height: 320px;
-  background: radial-gradient(circle, #A8B89A, transparent);
+  background: radial-gradient(circle, var(--terracotta), transparent);
   bottom: -60px; left: -60px;
 }
 .hero-inner {
@@ -307,7 +310,7 @@ section { padding: 100px 24px; }
 .ty-card::before {
   content: ''; position: absolute;
   top: 0; left: 0; right: 0; height: 5px;
-  background: linear-gradient(90deg, var(--coral), var(--peach), var(--sage));
+  background: linear-gradient(90deg, var(--coral), var(--peach));
 }
 .ty-card-to {
   font-size: .75rem; font-weight: 600; letter-spacing: .14em;
@@ -323,7 +326,7 @@ section { padding: 100px 24px; }
   line-height: 1.9; margin-bottom: 24px;
 }
 .ty-card-sig {
-  font-size: .82rem; color: var(--sage);
+  font-size: .82rem; color: var(--terracotta);
   font-style: italic;
   border-top: 1px solid #E8E0D8; padding-top: 16px;
 }
