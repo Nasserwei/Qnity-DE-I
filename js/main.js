@@ -22,10 +22,11 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeLightbox();
 });
 
-/* ── Scroll Fade-in Animation ── */
+/* ── Scroll Fade-in Animation（每次滑入畫面都會重新播放） ── */
 document.addEventListener('DOMContentLoaded', () => {
   const fadeEls = document.querySelectorAll(
-    '.activity-card, .ty-card, .team-member, .gallery-item'
+    '.value-item, .game-card, .ty-card, .team-member, .gallery-item, ' +
+    '.section-label, .section-title, .section-desc, .design-intro, .stats-row'
   );
 
   const observer = new IntersectionObserver(entries => {
@@ -33,7 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         entry.target.style.opacity = '1';
         entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target); // 動畫完成後停止觀察
+      } else {
+        entry.target.style.opacity = '0';
+        entry.target.style.transform = 'translateY(20px)';
       }
     });
   }, { threshold: 0.12 });
@@ -64,4 +67,77 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { rootMargin: '-40% 0px -55% 0px' });
 
   sections.forEach(section => navObserver.observe(section));
+});
+
+/* ── Nav Shadow + Back-to-Top Visibility + Hero Parallax on Scroll ── */
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('nav');
+  const backToTop = document.getElementById('back-to-top');
+  const heroDecos = document.querySelectorAll('.hero-deco');
+
+  const onScroll = () => {
+    const y = window.scrollY;
+
+    if (y > 20) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+
+    if (y > window.innerHeight * 0.6) backToTop.classList.add('show');
+    else backToTop.classList.remove('show');
+
+    heroDecos.forEach((el, i) => {
+      const speed = i === 0 ? 0.15 : 0.25;
+      el.style.transform = `translateY(${y * speed}px)`;
+    });
+  };
+
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+});
+
+/* ── Divider Grow-in Animation（每次滑入畫面都會重新播放） ── */
+document.addEventListener('DOMContentLoaded', () => {
+  const dividers = document.querySelectorAll('.divider');
+
+  const dividerObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('grow');
+      else entry.target.classList.remove('grow');
+    });
+  }, { threshold: 0.4 });
+
+  dividers.forEach(el => dividerObserver.observe(el));
+});
+
+/* ── Stats Count-up Animation（每次滑入畫面都會重新播放） ── */
+document.addEventListener('DOMContentLoaded', () => {
+  const statNums = document.querySelectorAll('.stat-num[data-target]');
+  const runningTicks = new WeakMap();
+
+  const statObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const el = entry.target;
+
+      if (!entry.isIntersecting) {
+        el.textContent = '0';
+        return;
+      }
+
+      const target = parseInt(el.dataset.target, 10);
+      const duration = 900;
+      const startTime = performance.now();
+      const tickId = Symbol();
+      runningTicks.set(el, tickId);
+
+      function tick(now) {
+        if (runningTicks.get(el) !== tickId) return; // 被下一次觸發取代，停止舊的動畫
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target);
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.5 });
+
+  statNums.forEach(el => statObserver.observe(el));
 });
