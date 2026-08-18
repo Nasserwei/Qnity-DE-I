@@ -115,18 +115,18 @@ document.addEventListener('DOMContentLoaded', () => {
   onScroll();
 });
 
-/* ── Divider Grow-in Animation（每次滑入畫面都會重新播放） ── */
+/* ── Divider／長條圖／圓餅圖 Grow-in Animation（每次滑入畫面都會重新播放） ── */
 document.addEventListener('DOMContentLoaded', () => {
-  const dividers = document.querySelectorAll('.divider');
+  const growEls = document.querySelectorAll('.divider, .bar-row, .donut-wrap');
 
-  const dividerObserver = new IntersectionObserver(entries => {
+  const growObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) entry.target.classList.add('grow');
       else entry.target.classList.remove('grow');
     });
   }, { threshold: 0.4 });
 
-  dividers.forEach(el => dividerObserver.observe(el));
+  growEls.forEach(el => growObserver.observe(el));
 });
 
 /* ── Stats Count-up Animation（每次滑入畫面都會重新播放） ── */

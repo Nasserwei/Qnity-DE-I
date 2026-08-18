@@ -44,7 +44,7 @@
       <span>「職」得認識的你</span>
     </h1>
     <p class="hero-sub">
-      由 Qnity Summer Intern 團隊策劃，以DE&I為主軸的理念，為公司設計一場探索工作價值觀：傾聽與共融之旅的活動
+      由 Qnity Summer Intern 團隊策劃，以DE&I為主軸的理念，設計一場探索工作價值觀：傾聽與共融之旅的活動
     </p>
     <!-- 改成你們的活動口號 -->
     <div class="hero-cta">
@@ -228,28 +228,12 @@
       -->
       <div class="gallery-grid">
 
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <span class="gallery-placeholder-icon">🎨</span>
-            <span>你畫我猜 遊戲照片</span>
-            <span class="placeholder-hint">請放入 images/ 資料夾後替換</span>
-          </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/d1.jpg" alt="企劃討論會議">
         </div>
 
-        <div class="gallery-item">
-          <div class="gallery-placeholder tall">
-            <span class="gallery-placeholder-icon">🃏</span>
-            <span>不小心幫到你 遊戲照片</span>
-            <span class="placeholder-hint">請放入 images/ 資料夾後替換</span>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <span class="gallery-placeholder-icon">🎲</span>
-            <span>遊戲設計花絮</span>
-            <span class="placeholder-hint">請放入 images/ 資料夾後替換</span>
-          </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/d2.jpg" alt="團隊合照">
         </div>
 
       </div>
@@ -307,73 +291,158 @@
       </div>
     </div>
 
+    <div class="impact-card">
+      <div class="impact-header">
+        <h3 class="impact-title">成效如何？</h3>
+        <p class="impact-meta">活動後問卷調查，四項核心指標一次看</p>
+      </div>
+
+      <div class="results-body">
+        <div class="bar-chart">
+          <div class="bar-row">
+            <div class="bar-label">滿意度</div>
+            <div class="bar-track"><div class="bar-fill" style="--bar-width:95%"></div></div>
+            <div class="bar-value">95%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">推薦意願</div>
+            <div class="bar-track"><div class="bar-fill" style="--bar-width:94%"></div></div>
+            <div class="bar-value">94%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">建立連結</div>
+            <div class="bar-track"><div class="bar-fill" style="--bar-width:92%"></div></div>
+            <div class="bar-value">92%</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">願意再次參加</div>
+            <div class="bar-track"><div class="bar-fill" style="--bar-width:83%"></div></div>
+            <div class="bar-value">83%</div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <div class="highlight-kicker">重點指標</div>
+          <div class="highlight-num"><span class="stat-num" data-target="92">0</span>%</div>
+          <div class="highlight-desc">建立更深的連結</div>
+          <div class="highlight-divider"></div>
+          <div class="highlight-nps"><span class="highlight-plus">+</span><span class="stat-num" data-target="79">0</span></div>
+          <div class="highlight-nps-label">NPS 淨推薦值</div>
+        </div>
+      </div>
+
+      <p class="impact-footnote">高滿意度，轉化為連結感與持續參與的意願。</p>
+    </div>
+
+    <div class="impact-card">
+      <div class="impact-header">
+        <h3 class="impact-title">讓成果延續：下一步的具體行動</h3>
+        <p class="impact-meta">問卷回饋歸納出兩大類收穫，也為下一場活動定出方向</p>
+      </div>
+
+      <div class="donut-body">
+        <div class="donut-col">
+          <div class="donut-wrap">
+            <svg class="donut-svg" viewBox="0 0 120 120">
+              <circle class="donut-track" cx="60" cy="60" r="50"></circle>
+              <circle class="donut-fill" cx="60" cy="60" r="50"></circle>
+            </svg>
+            <div class="donut-center">
+              <div class="donut-percent"><span class="stat-num" data-target="70">0</span>%</div>
+            </div>
+          </div>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot dot-a"></span>關係與協作 70%</div>
+            <div class="legend-item"><span class="legend-dot dot-b"></span>實務學習 30%</div>
+          </div>
+        </div>
+
+        <div class="next-steps">
+          <div class="next-steps-label">下一場活動的三個設計方向</div>
+          <div class="next-step">
+            <div class="next-step-num">01</div>
+            <div class="next-step-text">跨團隊的混合分組</div>
+          </div>
+          <div class="next-step">
+            <div class="next-step-num">02</div>
+            <div class="next-step-text">模擬真實的職場情境</div>
+          </div>
+          <div class="next-step">
+            <div class="next-step-num">03</div>
+            <div class="next-step-text">追蹤互助承諾的落實</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="gallery-grid" id="highlightsGrid">
 
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="images/w1.jpg" alt="來賓致詞與活動開場">
-        <div class="photo-caption">來賓致詞與活動開場</div>
       </div>
-
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/w16.jpg" alt="來賓致詞與大合照">
+      </div>
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="images/w2.jpg" alt="活動開場，主管致詞">
-        <div class="photo-caption">活動開場，主管致詞</div>
       </div>
 
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="images/w3.jpg" alt="破冰遊戲的手繪草稿">
-        <div class="photo-caption">破冰遊戲的手繪草稿</div>
       </div>
-
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="images/w4.jpg" alt="六大工作價值觀關鍵字卡">
-        <div class="photo-caption">六大工作價值觀關鍵字卡</div>
       </div>
-
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="images/w5.jpg" alt="主遊戲規則說明">
-        <div class="photo-caption">主遊戲規則說明</div>
       </div>
-
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="images/w6.jpg" alt="全員參與主遊戲：不小心幫到你">
-        <div class="photo-caption">全員參與主遊戲：不小心幫到你</div>
       </div>
-
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="images/w7.jpg" alt="小組討論與計分">
-        <div class="photo-caption">小組討論與計分</div>
       </div>
-
       <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="images/w8.jpg" alt="現場準備的點心與小禮物">
-        <div class="photo-caption">現場準備的點心與小禮物</div>
+        <img src="images/w10.jpg" alt="小組熱烈討論中">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/w12.jpg" alt="小組互動討論">
       </div>
 
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="images/w9.jpg" alt="參與者分享">
-        <div class="photo-caption">參與者分享</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/w13.jpg" alt="參與者主動分享想法">
       </div>
 
       <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="images/w10.jpg" alt="小組熱烈討論中">
-        <div class="photo-caption">小組熱烈討論中</div>
+        <img src="images/w8.jpg" alt="現場準備的點心與小禮物">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/w14.jpg" alt="現場餐盒與飲料">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/w15.jpg" alt="準備好的活動獎品">
       </div>
 
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="images/w11.jpg" alt="頒獎時刻，大合照留念">
-        <div class="photo-caption">頒獎時刻，大合照留念</div>
       </div>
 
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="images/w12.jpg" alt="小組互動討論">
-        <div class="photo-caption">小組互動討論</div>
-      </div>
+    </div>
 
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="images/w13.jpg" alt="參與者主動分享想法">
-        <div class="photo-caption">參與者主動分享想法</div>
+    <div class="video-embed">
+      <div class="video-embed-label">活動回顧影片</div>
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/eV8AXilLlTY"
+          title="活動成果回顧影片"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
-
     </div>
   </div>
 </section>
@@ -388,47 +457,31 @@
       這段實習期間，每一位給予我們指導與支持的夥伴，都值得被感謝。
     </p>
 
-    <div class="cards-row">
-
-      <div class="ty-card">
-        <div class="ty-card-to">致</div>
-        <div class="ty-card-name">XXX 主管</div>
-        <!-- 👉 換成感謝對象的名字 -->
-        <div class="ty-card-msg">
-          感謝您在這段實習期間給予我們的耐心指導與支持。
-          每一次的 meeting 和 feedback，都讓我們成長很多。
-          <!-- 👉 換成你們的感謝文字 -->
-        </div>
-        <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
-        <div class="ty-deco">🌷</div>
+    <div class="card-concept">
+      <div class="card-concept-label">Design Concept</div>
+      <div class="card-concept-highlights">
+        <span class="highlight">Qnity</span>
+        <span class="highlight">Responsibility</span>
+        <span class="highlight">Abundant Opportunities</span>
+        <span class="highlight">Blessings and Growth</span>
       </div>
 
-      <div class="ty-card">
-        <div class="ty-card-to">致</div>
-        <div class="ty-card-name">所有同仁</div>
-        <!-- 👉 換成感謝對象的名字 -->
-        <div class="ty-card-msg">
-          謝謝在我們迷茫時給出答案的每一位前輩，
-          謝謝在我們犯錯時寬容對待的每一位夥伴。
-          <!-- 👉 換成你們的感謝文字 -->
+      <div class="card-showcase">
+        <div class="card-showcase-item" onclick="openLightbox(this)">
+          <img src="images/c1.png" alt="感謝卡設計一：花海與 Thank Q">
         </div>
-        <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
-        <div class="ty-deco">🌸</div>
+        <div class="card-showcase-item" onclick="openLightbox(this)">
+          <img src="images/c2.jpg" alt="感謝卡設計二：貓咪與 Thank You">
+        </div>
+        <div class="card-showcase-item" onclick="openLightbox(this)">
+          <img src="images/c3.jpg" alt="感謝卡設計三：比心與 Thank Q">
+        </div>
+        <div class="card-showcase-item card-showcase-video">
+          <video src="images/c4.mp4" controls playsinline></video>
+        </div>
       </div>
 
-      <div class="ty-card">
-        <div class="ty-card-to">致</div>
-        <div class="ty-card-name">Qnity 公司</div>
-        <!-- 👉 換成感謝對象的名字 -->
-        <div class="ty-card-msg">
-          感謝 Qnity 給予我們這次寶貴的實習機會，
-          讓我們在真實的工作環境中學習與成長。
-          <!-- 👉 換成你們的感謝文字 -->
-        </div>
-        <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
-        <div class="ty-deco">💐</div>
-      </div>
-
+      <div class="card-credit">視覺設計：Sindy</div>
     </div>
   </div>
 </section>
@@ -525,22 +578,31 @@
     <div class="divider"></div>
 
     <div class="mentor-label">指導 Mentor</div>
-    <div class="team-row">
-      <!-- 👉 換成 Mentor 真實的照片與名字 -->
+    <div class="team-row team-row-mentors">
       <div class="team-member">
-        <div class="team-avatar">🧑‍🏫</div>
-        <div class="team-name">Mentor 1</div>
-        <div class="team-role">Mentor</div>
+        <div class="team-avatar"><img src="images/01.png" alt="Kenny"></div>
+        <div class="team-name">Kenny</div>
+        <div class="team-role">Regional Business Director</div>
       </div>
       <div class="team-member">
-        <div class="team-avatar">🧑‍🏫</div>
-        <div class="team-name">Mentor 2</div>
-        <div class="team-role">Mentor</div>
+        <div class="team-avatar"><img src="images/02.png" alt="Marvis"></div>
+        <div class="team-name">Marvis</div>
+        <div class="team-role">Site Training Specialist</div>
       </div>
       <div class="team-member">
-        <div class="team-avatar">🧑‍🏫</div>
-        <div class="team-name">Mentor 3</div>
-        <div class="team-role">Mentor</div>
+        <div class="team-avatar"><img src="images/03.png" alt="PengPeng"></div>
+        <div class="team-name">PengPeng</div>
+        <div class="team-role">Product Stewardship<br>and Regulatory<br>Senior Analyst</div>
+      </div>
+      <div class="team-member">
+        <div class="team-avatar"><img src="images/04.png" alt="Neo"></div>
+        <div class="team-name">Neo</div>
+        <div class="team-role">Administration</div>
+      </div>
+      <div class="team-member">
+        <div class="team-avatar"><img src="images/05.jpg" alt="Ricky"></div>
+        <div class="team-name">Ricky</div>
+        <div class="team-role">Account Manager</div>
       </div>
     </div>
 
