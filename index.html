@@ -435,13 +435,7 @@
     <div class="video-embed">
       <div class="video-embed-label">活動回顧影片</div>
       <div class="video-frame">
-        <iframe
-          src="https://www.youtube.com/embed/eV8AXilLlTY"
-          title="活動成果回顧影片"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+        <video src="images/DEI.mp4" controls playsinline preload="metadata"></video>
       </div>
     </div>
   </div>
@@ -527,45 +521,84 @@
     <div class="divider"></div>
     <p class="section-desc">從企劃到執行，每個人都在過程中留下了自己的體悟。</p>
 
-    <div class="cards-row">
-      <!-- 👉 換成你們真實的心得內容與姓名 -->
+    <div class="reflection-carousel-wrap">
+      <button class="carousel-btn carousel-prev" aria-label="上一則" onclick="scrollReflection(-1)">‹</button>
 
-      <div class="ty-card">
-        <div class="ty-card-to">心得</div>
-        <div class="ty-card-name">成員一</div>
-        <div class="ty-card-msg">
-          從企劃到執行，這次最大的收穫是學會怎麼把抽象的 DE&I 理念，
-          轉化成一般人也願意參與、聽得懂的活動內容。
-          <!-- 👉 換成真實心得 -->
+      <div class="reflection-carousel" id="reflectionCarousel">
+
+        <div class="ty-card reflection-card">
+          <div class="ty-card-to">心得</div>
+          <div class="ty-card-name">Nasser</div>
+          <div class="ty-card-msg">
+            從企劃到執行，這次最大的收穫是學會怎麼把抽象的 DE&I 理念，透過遊玩的方式轉化成一般人也願意參與、聽得懂的活動內容。
+          </div>
+          <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
+          <div class="ty-deco">💭</div>
         </div>
-        <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
-        <div class="ty-deco">💭</div>
+
+        <div class="ty-card reflection-card">
+          <div class="ty-card-to">心得</div>
+          <div class="ty-card-name">Sindy</div>
+          <div class="ty-card-msg">
+            這次的 DE&I 活動讓我學會如何站在不同人的立場思考，並透過跨部門溝通去傳遞共融價值。這不只提升了我的組織與策劃能力，更讓我懂得如何打造一個讓人有歸屬感的環境。
+          </div>
+          <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
+          <div class="ty-deco">✨</div>
+        </div>
+
+        <div class="ty-card reflection-card">
+          <div class="ty-card-to">心得</div>
+          <div class="ty-card-name">Sandra</div>
+          <div class="ty-card-msg">
+            在這個 DE&I 的大家庭裡，我們將各自的獨特視角匯聚在一起，共同成就了這次的體驗。這份真切的多元共融，不僅存在於我們團隊的日常互動中，更化作一股溫柔的力量，讓我們能齊心協力，將這份深具意義的價值，觸動每一位參與者。
+          </div>
+          <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
+          <div class="ty-deco">🌱</div>
+        </div>
+
+        <div class="ty-card reflection-card">
+          <div class="ty-card-to">心得</div>
+          <div class="ty-card-name">Hank</div>
+          <div class="ty-card-msg">
+            這次活動讓我們看見，每個人都有不同的經驗與觀點，而真正的共融，往往從願意傾聽與理解開始。當我們願意提出真誠的問題、聽見彼此的聲音，就有機會在無形中幫助他人成長、理解彼此。
+          </div>
+          <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
+          <div class="ty-deco">🤝</div>
+        </div>
+
+        <div class="ty-card reflection-card">
+          <div class="ty-card-to">心得</div>
+          <div class="ty-card-name">Beckham</div>
+          <div class="ty-card-msg">
+            透過這次活動，更理解多元與包容的價值，也學會尊重不同觀點。
+          </div>
+          <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
+          <div class="ty-deco">🌷</div>
+        </div>
+
+        <div class="ty-card reflection-card">
+          <div class="ty-card-to">心得</div>
+          <div class="ty-card-name">Catherine</div>
+          <div class="ty-card-msg">
+            從交流與互動中看見彼此的差異，也更理解尊重與包容對團隊的重要性。
+          </div>
+          <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
+          <div class="ty-deco">🌸</div>
+        </div>
+
+        <div class="ty-card reflection-card">
+          <div class="ty-card-to">心得</div>
+          <div class="ty-card-name">Lucas</div>
+          <div class="ty-card-msg">
+            透過這次 DE&I 活動，認識不同背景與觀點，也體會多元包容能讓團隊更加緊密。
+          </div>
+          <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
+          <div class="ty-deco">💐</div>
+        </div>
+
       </div>
 
-      <div class="ty-card">
-        <div class="ty-card-to">心得</div>
-        <div class="ty-card-name">成員二</div>
-        <div class="ty-card-msg">
-          印象最深的是跟夥伴一起討論遊戲機制的過程，
-          原來要讓別人「感受到」多元共融，比直接說教困難也有趣得多。
-          <!-- 👉 換成真實心得 -->
-        </div>
-        <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
-        <div class="ty-deco">✨</div>
-      </div>
-
-      <div class="ty-card">
-        <div class="ty-card-to">心得</div>
-        <div class="ty-card-name">成員三</div>
-        <div class="ty-card-msg">
-          這次專案讓我體會到團隊合作不是分工完就好，
-          而是要一直互相傾聽、互相調整，才能做出真正想要的成果。
-          <!-- 👉 換成真實心得 -->
-        </div>
-        <div class="ty-card-sig">— Qnity Intern Team, 2026</div>
-        <div class="ty-deco">🌱</div>
-      </div>
-
+      <button class="carousel-btn carousel-next" aria-label="下一則" onclick="scrollReflection(1)">›</button>
     </div>
   </div>
 </section>

@@ -22,6 +22,15 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeLightbox();
 });
 
+/* ── 活動心得：左右滑動 ── */
+function scrollReflection(direction) {
+  const track = document.getElementById('reflectionCarousel');
+  if (!track) return;
+  const card = track.querySelector('.reflection-card');
+  const distance = card ? card.offsetWidth + 24 : 320;
+  track.scrollBy({ left: direction * distance, behavior: 'smooth' });
+}
+
 /* ── 手機版選單開關 ── */
 document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.getElementById('navToggle');
